@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Rule</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css">
+  </head>
+  <body>
+
+    <div id="js-mouse"></div>
+    
+    <div class="scroll_side">
+      <span class="scroll_side-inner"></span>
+    </div>
+
+    <div class="nav">
+      <div class="header">
+        <h1 class="header_inner">Coding<br>Rule</h1>
+        <div class="white"></div>
+      </div>
+      <ul class="nav_list">
+        <li class="nav_list-item"><a href="#contents1">環境</a></li>
+        <li class="nav_list-item"><a href="#contents2">対応範囲</a></li>
+        <li class="nav_list-item"><a href="#contents3">共通ルール</a></li>
+        <li class="nav_list-item"><a href="#contents4">命名</a></li>
+        <li class="nav_list-item"><a href="#contents5">HTML</a></li>
+        <li class="nav_list-item"><a href="#contents6">CSS</a></li>
+        <li class="nav_list-item"><a href="#contents7">JavaScript</a></li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="main_inner">
+      <section class="contents1" id="contents1">
+        <h2>環境</h2>
+        <h3>Visual Studio Code</h3>
+        <div class="sub_title">
+          <span>コードエディター</span>
+        </div>
+        <div class="contents_inner">
+          <table>
+            <tr>
+              <th class="left">プラグイン</th>
+              <td class="right">機能</td>
+            </tr>
+            <tr>
+            <tr>
+              <th>Japanese Language Pack for Visual Studio Code</th>
+              <td>日本語対応</td>
+            </tr>
+            <tr>
+              <th>Live Server</th>
+              <td>テキストエディタの変更内容をリアルタイムでブラウザに反映</td>
+            </tr>
+            <tr>
+              <th>Live Preview</th>
+              <td>VScode内でhtmlのプレビューを見れる</td>
+            </tr>
+            <tr>
+              <th>Auto Rename Tag</th>
+              <td>開きタグと閉じタグを同時に変更、削除できる</td>
+            </tr>
+            <tr>
+              <th>Code Spell Checker</th>
+              <td>スペルミスを教えてくれる</td>
+            </tr>
+            <tr>
+              <th>Prettier - Code formatter</th>
+              <td>コード整形</td>
+            </tr>
+            <tr>
+              <th>zenkaku</th>
+              <td>全角スペースがあると表示してくれる</td>
+            </tr>
+            <tr>
+              <th>Path Intellisense</th>
+              <td>パスを自動的に補完</td>
+            </tr>
+            <tr>
+              <th>Live Sass Compiler</th>
+              <td>sassファイルから自動的にcssファイルをコンパイル</td>
+            </tr>
+            <tr>
+              <th>WordPress Snippet</th>
+              <td>wordpress関数を補完</td>
+            </tr>
+            <tr>
+              <th>indent-rainbow</th>
+              <td>インデント数に応じて色分け</td>
+            </tr>
+            <tr>
+              <th>CSScomb</th>
+              <td>cssのフォーマットを整える</td>
+            </tr>
+          </table>
+        </div>
+
+        <h3>Local</h3>
+        <div class="sub_title">
+          <span>開発環境</span>
+        </div>
+        <div class="contents_inner">
+          <ul>
+            <li>Localのみでwordpress開発環境の構築が可能</li>
+            <li>複数の環境を構築可能</li>
+            <li>Apache、nginxからwebサーバーを選択可能</li>
+            <li>PHP、MySQLのバージョンも指定できる</li>
+            <li>UIが優れている。操作しやすい</li>
+          </ul>
+        </div>
+
+        <h3>Powershell</h3>
+        <div class="sub_title">
+          <span>コマンドシェル</span>
+        </div>
+        <div class="contents_inner">
+          <p>Windows標準搭載のコマンドシェル。<br>同じく標準搭載のコマンドプロンプトでも可。</p>
+        </div>
+
+        <h3>FTP</h3>
+        <div class="sub_title">
+          <span>通信プロトコル</span>
+        </div>
+        <div class="contents_inner">
+          <ul>
+            <li>サーバーファイルのダウンロード、アップロード</li>
+            <li>パーミッション値の変更</li>
+          </ul>
+        </div>
+
+        <h3>Google拡張機能</h3>
+        <div class="contents_inner">
+          <table>
+            <tr>
+              <th>ColorZilla</th>
+              <td>webサイト、画像や写真などページのどこからでも色が抽出できる</td>
+            </tr>
+            <tr>
+              <th>Responsive Viewer</th>
+              <td>複数端末のレスポンシブ表示を1つの画面で一斉に確認できる</td>
+            </tr>
+            <tr>
+              <th>Wappalyzer</th>
+              <td>サイトが使用しているCMS、サーバー、プログラミング言語、アナリティクス、フレームワークなどを確認できる</td>
+            </tr>
+            <tr>
+              <th>WhatFont</th>
+              <td>使用しているフォントを確認できる</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="contents2" id="contents2">
+        <h2>対応範囲</h2>
+        <h3>スキル</h3>
+        <div class="contents_inner">
+          <div class="skill_box">
+          <p>HTML5</p>
+          <p>CSS3</p>
+          <p>PHP</p>
+          <p>Javascript</p>
+          <p>JQuery</p>
+        </div>
+        </div>
+        <h3>検証ブラウザ</h3>
+        <div class="contents_inner">
+          <p>PC：Google Chrome・Safari・Microsoft Edge<br>SP：iPhoneXR（倉田実機）・iPad（社用）<br><a href="https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb" target="_blank">Responsive Viewer</a>（google拡張機能）</p>
+        </div>
+        <h3>エラー・バリデーションチェック</h3>
+        <div class="contents_inner">
+          <ul>
+            <li>Googleデベロッパーツール（F12）にてコンソールエラーを検証</li>
+            <li><a href="https://validator.w3.org/" target="_blank">W3Cバリデーションチェック</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="contents3" id="contents3">
+        <h2>共通ルール</h2>
+        <p>随時追記予定</p>
+      </section>
+
+      <section class="contents4" id="contents4">
+        <h2>命名</h2>
+        <h3>BEM命名</h3>
+        <div class="contents_inner">
+          <p>BEMとはBlocks-Elements-Modifiersの略で、HTMLおよびCSSのクラスに名前を付ける方法<br>
+          <a href="https://desnote.com/block__element-modifier/" target="_blank">BEMとは</a></p>
+
+          <div class="bem-rule">
+            <p>基本ルール</p>
+            <ul>
+              <li>blockとelementはアンダースコア2つで区切る</li>
+              <li>Elementとmodifierはハイフンで区切る</li>
+              <li>ハイフンとアンダースコアは2つ</li>
+              <li>block, element, modifierが複数単語になる場合、単語と単語の間はハイフン1つで区切る</li>
+              <li>ハイフン1つの場合はElementとModifierの区切りではなく、ただの単語の区切りとして使用</li>
+            </ul>
+          </div>
+
+          <div class="code-snippets">
+            <p>例</p>
+            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="bGOpRNe" data-user="njktjhfx-the-encoder" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+              <span>See the Pen <a href="https://codepen.io/njktjhfx-the-encoder/pen/bGOpRNe">
+              sample</a> by yuto (<a href="https://codepen.io/njktjhfx-the-encoder">@njktjhfx-the-encoder</a>)
+              on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+          </div>
+        </div>
+      </section>
+
+      <section class="contents5" id="contents5">
+        <h2>HTML</h2>
+        <p>随時追記予定</p>
+        <canvas id="myCanvas" style="max-width: 100%;"></canvas>
+      </section>
+
+      <section class="contents6" id="contents6">
+        <h2>CSS</h2>
+        <h3>reset.css</h3>
+        <div class="contents_inner">
+          <p>ブラウザ間でのスタイルのズレを極力無くすため、必ずreset.cssを導入する</p>
+          <p>▼おすすめreset.css</p>
+          <p>Destyle.css</p>
+          <div class="code-block-container">
+            <pre>
+              <code>
+                <span>&lt;!-- destyle.css CDN --&gt;</span>
+                <span>&lt;<param>link</param> rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css&quot; /&gt;</span>
+              </code>
+            </pre>
+          </div>
+        </div>
+
+        <h3>ルール</h3>
+        <div class="contents_inner">
+          <table>
+            <tr>
+              <th>SCSS記法</th>
+              <td>基本的にscssを用いてスタイリングする。<br>
+                  コンパイルはvscodeの拡張機能「Live Sass Compiler」で行う<br>
+                  ↳リアルタイムでコンパイルしてくれるので便利 
+              </td>
+            </tr>
+            <tr>
+              <th>配色</th>
+              <td>サイトによってはテーマ色が存在するため、よく使う色は変数で基本色を設定<br>
+                例
+                <br>
+                <div class="css-color_code">
+                  <p>$theme: #000;</p>
+                  <p>$white: #ffffff;</p>
+                  <p>$red: #ff0000;</p>
+                </div>
+                  <p>background-color : $000;</p>
+              </td>
+            </tr>
+            <tr>
+              <th>構造</th>
+              <td>ネスト（入れ子）を使い記述量を極力減らす<br>
+                例
+                <br>
+                <div class="scss_code">
+                  <pre>
+                    <code>
+                      <span class="token selector">.main </span>
+                      <span class="token punctuation">{</span>
+                      <span class="token selector">.box </span>
+                      <span class="token punctuation">{</span>
+                    </code>
+                  </pre>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th>プロパティ</th>
+              <td>プロパティは視覚順に並び替える。<br>
+                  手動では面倒なため「CSScomb」というプラグインを使用<br>
+                  ↳リアルタイムでコンパイルしてくれるので便利 <br>
+                  <a href="https://zenn.dev/web_tips/articles/f1167f4314dcb3#%E8%A6%96%E8%A6%9A%E9%A0%86" target="_blank">視覚順とは？</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="contents7" id="contents7">
+        <h2>JavaScript</h2>
+        <h3>定義について</h3>
+        <div class="contents_inner">
+          <p>変数は可能な限りconstを使用し、変数のスコープを縮める。</p>
+          <p></p>
+        </div>
+        <h3>constで変数を定義する理由</h3>
+        <div class="contents_inner">
+          <ul>
+            <li>再宣言と再代入ができない→同じ変数を使ってしまった場合タイプエラーを起こしてくれるため、意図せぬエラーを未然に防ぐことができる。</li>
+            <li>constの他に変数を定義するものとしてlet、varがあるが、基本的にはconstを使用し、変数の再代入がどうしても必要な場合はletを使用。<br>
+              <span class="attention">varは一切使う必要ない</span></li>
+          </ul>
+        </div>
+      </section>
+    </section>
+    </section>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="https://unpkg.com/three@0.146.0/build/three.min.js"></script>
+  <script src="js/index.js"></script>
+</html>

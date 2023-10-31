@@ -1,0 +1,56 @@
+window.addEventListener("DOMContentLoaded", init);
+
+function init() {
+    const width = 700;
+    const height = 540;
+
+//レンダラーを作成
+    const renderer = new THREE.WebGLRenderer({
+        canvas: document.querySelector("#myCanvas")
+    })
+    renderer.setSize(width, height);
+    renderer.setPixelRatio('window' .devicePixelRatio);
+
+// シーンを作成
+    const scene = new THREE.Scene();
+
+    scene.fog = new THREE.Fog(0x000000, 50, 2000);
+
+// カメラを作る
+    const camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
+// カメラの初期座標を設定（X座標:0, Y座標:0, Z座標:0）
+    camera.position.set(0, 0, 1000);
+
+// boxを作る
+    const geometry = new THREE.TorusKnotGeometry(300, 40, 3, 16);
+    const material = new THREE.MeshBasicMaterial({
+        color: 0XD3D3D3
+    });
+    const torusKnot = new THREE.Mesh( geometry, material ); scene.add( torusKnot );
+    const box = new THREE.Mesh(geometry, material);
+    scene.add(box);
+
+// ライトを作る
+    const light = new THREE.DirectionalLight(0xFFFFFF)
+    light.intensity = 2; // 光の強さ倍
+    light.position.set(1, 1, 1); // ライトの方向
+    // シーンに追加
+    scene.add(light);
+
+// レンダリング
+    renderer.render(scene, camera);
+
+// 初回実行
+    tick();
+
+    function tick() {
+        requestAnimationFrame(tick);
+
+        // 回転させる
+        box.rotation.y += 0.01;
+        box.rotation.x += 0.01;
+
+        // レンダリング
+        renderer.render(scene, camera);
+    }
+}
