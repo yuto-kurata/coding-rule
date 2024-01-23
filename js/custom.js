@@ -30,5 +30,5 @@ for (let i = 0; i < linkElem.length; i++) {
 }
 
 gsap.from(".header_inner", {
-    x: -400,
+    x: -500,
   });
