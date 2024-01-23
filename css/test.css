@@ -1,0 +1,24 @@
+.reaction-bar {
+    container-type: ○○;
+  }
+
+  .container {
+    container-type: inline-size;
+  }
+
+  .container {
+    resize: horizontal;
+    overflow: auto;
+    margin: auto;
+    p {
+        text-align: center;
+    }
+  }
+
+  @container (width >= 300px) {
+    p {
+      color: #f4481a;
+      font-size: 26px;
+      font-weight: bold;
+    }
+  }

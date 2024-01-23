@@ -1,6 +1,7 @@
+// ページスクロール
 $('a[href^="#"]').click(function () {
     const speed = 800;
-    const headerHight = 58; 
+    const headerHight = 58;
     const href = $(this).attr("href");
     const target = $(href == "#" || href == "" ? 'html' : href);
     const position = target.offset().top-headerHight;
@@ -8,14 +9,26 @@ $('a[href^="#"]').click(function () {
     return false;
 });
 
-$(function(){
-    const mouse = $("#js-mouse");
-    $(document).on("mousemove",function(e){
-        const x=e.clientX;
-        const y=e.clientY;
-        mouse.css({
-            "opacity": "1",
-            "transform": "translate(" + x + "px," + y + "px)",
-        });
-    });
+// マウスストーカー
+const stalker = document.getElementById('js-mouse');
+let hovFlag = false;
+
+document.addEventListener('mousemove', function (e) {
+    stalker.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
 });
+
+const linkElem = document.querySelectorAll('a:not(.no_stick_)');
+for (let i = 0; i < linkElem.length; i++) {
+    linkElem[i].addEventListener('mouseover', function (e) {
+        hovFlag = true;
+        stalker.classList.add('is_active');
+    });
+    linkElem[i].addEventListener('mouseout', function (e) {
+        hovFlag = false;
+        stalker.classList.remove('is_active');
+    });
+}
+
+gsap.from(".header_inner", {
+    x: -400,
+  });

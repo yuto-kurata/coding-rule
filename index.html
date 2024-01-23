@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="css/responsive.css">
   </head>
   <body>
-
     <div id="js-mouse"></div>
-    
+
     <div class="scroll_side">
       <span class="scroll_side-inner"></span>
     </div>
+
+    <canvas id="myCanvas" style="max-width: 100%;"></canvas>
 
     <div class="nav">
       <div class="header">
@@ -22,7 +23,7 @@
         <div class="white"></div>
       </div>
       <ul class="nav_list">
-        <li class="nav_list-item"><a href="#contents1">環境</a></li>
+        <li class="nav_list-item"><a href="#contents1">Development environment<span>環境</span></a></li>
         <li class="nav_list-item"><a href="#contents2">対応範囲</a></li>
         <li class="nav_list-item"><a href="#contents3">共通ルール</a></li>
         <li class="nav_list-item"><a href="#contents4">命名</a></li>
@@ -32,10 +33,11 @@
       </ul>
     </div>
 
-    <div class="main">
+    <div class="main" data-scroll>
       <div class="main_inner">
       <section class="contents1" id="contents1">
-        <h2>環境</h2>
+        <div class="contents_wrap">
+          <h2>環境</h2>
         <h3>Visual Studio Code</h3>
         <div class="sub_title">
           <span>コードエディター</span>
@@ -152,10 +154,12 @@
             </tr>
           </table>
         </div>
+        </div>
       </section>
 
       <section class="contents2" id="contents2">
-        <h2>対応範囲</h2>
+        <div class="contents_wrap">
+          <h2>対応範囲</h2>
         <h3>スキル</h3>
         <div class="contents_inner">
           <div class="skill_box">
@@ -177,15 +181,19 @@
             <li><a href="https://validator.w3.org/" target="_blank">W3Cバリデーションチェック</a></li>
           </ul>
         </div>
+        </div>
       </section>
 
       <section class="contents3" id="contents3">
-        <h2>共通ルール</h2>
-        <p>随時追記予定</p>
+        <div class="contents_wrap">
+          <h2>共通ルール</h2>
+          <p>随時追記予定</p>
+        </div>
       </section>
 
       <section class="contents4" id="contents4">
-        <h2>命名</h2>
+        <div class="contents_wrap">
+          <h2>命名</h2>
         <h3>BEM命名</h3>
         <div class="contents_inner">
           <p>BEMとはBlocks-Elements-Modifiersの略で、HTMLおよびCSSのクラスに名前を付ける方法<br>
@@ -212,16 +220,19 @@
             <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
           </div>
         </div>
+        </div>
       </section>
 
       <section class="contents5" id="contents5">
-        <h2>HTML</h2>
-        <p>随時追記予定</p>
-        <canvas id="myCanvas" style="max-width: 100%;"></canvas>
+        <div class="contents_wrap">
+          <h2>HTML</h2>
+          <p>随時追記予定</p>
+        </div>
       </section>
 
       <section class="contents6" id="contents6">
-        <h2>CSS</h2>
+        <div class="contents_wrap">
+          <h2>CSS</h2>
         <h3>reset.css</h3>
         <div class="contents_inner">
           <p>ブラウザ間でのスタイルのズレを極力無くすため、必ずreset.cssを導入する</p>
@@ -244,7 +255,7 @@
               <th>SCSS記法</th>
               <td>基本的にscssを用いてスタイリングする。<br>
                   コンパイルはvscodeの拡張機能「Live Sass Compiler」で行う<br>
-                  ↳リアルタイムでコンパイルしてくれるので便利 
+                  ↳リアルタイムでコンパイルしてくれるので便利
               </td>
             </tr>
             <tr>
@@ -287,10 +298,12 @@
             </tr>
           </table>
         </div>
+        </div>
       </section>
 
       <section class="contents7" id="contents7">
-        <h2>JavaScript</h2>
+        <div class="contents_wrap">
+          <h2>JavaScript</h2>
         <h3>定義について</h3>
         <div class="contents_inner">
           <p>変数は可能な限りconstを使用し、変数のスコープを縮める。</p>
@@ -304,10 +317,13 @@
               <span class="attention">varは一切使う必要ない</span></li>
           </ul>
         </div>
+        </div>
       </section>
-    </section>
-    </section>
+    </div>
+  </div>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="js/custom.js"></script>
   <script src="https://unpkg.com/three@0.146.0/build/three.min.js"></script>
