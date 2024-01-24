@@ -28,7 +28,3 @@ for (let i = 0; i < linkElem.length; i++) {
         stalker.classList.remove('is_active');
     });
 }
-
-gsap.from(".header_inner", {
-    x: -400,
-  });
