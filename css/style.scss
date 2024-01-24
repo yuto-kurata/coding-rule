@@ -141,7 +141,7 @@ table {
 }
 
 // マウスストーカー
-#js-mouse {
+#cursor-tracker {
     position: fixed;
     top: -15px;
     left: -15px;
@@ -255,7 +255,7 @@ pre {
     }
 }
 
-.scroll_side {
+.scroll_indicator {
     position: fixed;
     right: 0;
     bottom: 0;

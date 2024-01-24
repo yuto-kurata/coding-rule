@@ -25,7 +25,7 @@ function init() {
     camera.position.set(-450, 0, 1000);
 
     // boxを作る
-    const geometry = new THREE.SphereGeometry(100, 128, 128);
+    const geometry = new THREE.SphereGeometry(200, 128, 128);
     const material = new THREE.MeshLambertMaterial({
         color: 0X3381EA
     });
@@ -34,7 +34,7 @@ function init() {
 
     // ライトを作る
     const light = new THREE.DirectionalLight(0xFFFFFF)
-    light.intensity = 2; // 光の強さ倍
+    light.intensity = 1; // 光の強さ倍
     light.position.set(1, 1, 1); // ライトの方向
     // シーンに追加
     scene.add(light);
@@ -48,11 +48,21 @@ function init() {
     document.addEventListener('mousemove', function(e) {
         const mouseX = e.clientX;
         const mouseY = e.clientY;
-        const targetX = (mouseX - window.innerWidth / 1.5) * 0.001;
-        const targetY = (mouseY - window.innerHeight / 2) * 0.001;
-
-        box.position.x += targetX;
-        box.position.y += targetY;
+        const targetX = (mouseX - window.innerWidth / 4) * 0.001;
+        const targetY = (mouseY - window.innerHeight / 4) * 0.001;
+    
+        // boxとマウスの位置の差分を計算
+        const diffX = targetX - box.position.x;
+        const diffY = targetY - box.position.y;
+    
+        // 差分に基づいてboxの位置を更新
+        box.position.x += diffX * 0.05;
+        box.position.y += diffY * 0.05;
+    
+        // マウスが近づくとboxが変形するようにスケールを更新
+        const distance = Math.sqrt(diffX * diffX + diffY * diffY);
+        const scale = Math.max(0.1, 1 - distance * 0.1);
+        box.scale.set(scale, scale, scale);
     });
 
     function tick() {
