@@ -13,7 +13,6 @@ $accent: royalblue;
 
 html {
     scroll-padding-top: 20px;
-    scroll-behavior: smooth;
 }
 
 canvas {
@@ -29,7 +28,6 @@ body {
     background-repeat: repeat;
     background-attachment: fixed;
     font-family: Sawarabi Gothic, sans-serif;
-    cursor: none;
     &::-webkit-scrollbar {
         display: none;
     }
