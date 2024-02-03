@@ -15,9 +15,13 @@
     top: 0;
     padding: 0;
     z-index: 99;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-top: 58px;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: inherit;
   }
   .nav_list {
@@ -25,7 +29,9 @@
     font-size: 12px;
   }
   .nav_list-item {
-    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
     text-orientation: sideways;
     padding: 6px 3px;
   }
@@ -38,6 +44,7 @@
   .nav_list-item a:hover {
     background: radial-gradient(rgb(114, 114, 114), rgb(233, 233, 233));
     color: #fff;
+    -webkit-transition: 0.6s;
     transition: 0.6s;
   }
   .scroll_indicator {
@@ -49,9 +56,19 @@
     display: block;
     width: 100%;
     height: 100%;
-    transform-origin: bottom;
-    animation: parallel-scroll linear;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+    -webkit-animation: parallel-scroll linear;
+            animation: parallel-scroll linear;
     animation-timeline: scroll();
+  }
+  @-webkit-keyframes parallel-scroll {
+    from {
+      scale: 1 0;
+    }
+    to {
+      scale: 1 1;
+    }
   }
   @keyframes parallel-scroll {
     from {
@@ -70,4 +87,4 @@
   .main .contents1 table .right {
     display: none;
   }
-}/*# sourceMappingURL=responsive.css.map */
+}
