@@ -1,13 +1,15 @@
 // ページ内リンクスムーススクロール
 function smoothScroll() {
-    $('a[href^="#"]').click(function () {
-        const speed = 800;
-        const headerHight = 58;
-        const href = $(this).attr("href");
-        const target = $(href == "#" || href == "" ? 'html' : href);
-        const position = target.offset().top - headerHight;
-        $('body,html').animate({ scrollTop: position }, speed, 'swing');
-        return false;
+    document.querySelectorAll('a[href^="#"]').forEach(elem => {
+        elem.addEventListener('click', e => {
+            e.preventDefault();
+            const speed = 800;
+            const headerHight = 58;
+            const href = elem.getAttribute("href");
+            const target = document.querySelector(href == "#" || href == "" ? 'html' : href);
+            const position = target.offsetTop - headerHight;
+            window.scrollTo({ top: position, behavior: 'smooth' });
+        });
     });
 }
 
