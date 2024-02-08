@@ -19,9 +19,9 @@
     display: -ms-flexbox;
     display: flex;
     margin-top: 58px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
     background-color: inherit;
   }
   .nav_list {
@@ -40,12 +40,7 @@
     width: 100%;
     padding: inherit;
     color: #000;
-  }
-  .nav_list-item a:hover {
-    background: radial-gradient(rgb(114, 114, 114), rgb(233, 233, 233));
-    color: #fff;
-    -webkit-transition: 0.6s;
-    transition: 0.6s;
+    font-size: 12px;
   }
   .scroll_indicator {
     width: 7px;
