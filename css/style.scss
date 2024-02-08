@@ -246,12 +246,16 @@ pre {
                 font-weight: 600;
                 font-size: 14px;
             }
+            .active {
+                background: #ff3434;
+                transition: .2s;
+            }
         }
-        &-item a:hover {
-            background-color: rgba(255, 255, 255, .863);
-            color: $black;
-            transition: .6s;
-        }
+        // &-item a:hover {
+        //     background-color: rgba(255, 255, 255, .863);
+        //     color: $black;
+        //     transition: .6s;
+        // }
     }
 }
 

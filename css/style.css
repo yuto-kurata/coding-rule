@@ -246,11 +246,10 @@ pre span {
   font-weight: 600;
   font-size: 14px;
 }
-.nav_list-item a:hover {
-  background-color: rgba(255, 255, 255, 0.863);
-  color: #000;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+.nav_list-item .active {
+  background: #ff3434;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .scroll_indicator {

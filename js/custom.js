@@ -4,7 +4,7 @@ function smoothScroll() {
         elem.addEventListener('click', e => {
             e.preventDefault();
             const speed = 800;
-            const headerHight = 58;
+            const headerHight = 0;
             const href = elem.getAttribute("href");
             const target = document.querySelector(href == "#" || href == "" ? 'html' : href);
             const position = target.offsetTop - headerHight;
@@ -35,6 +35,30 @@ function mouseStalker() {
     }
 }
 
+// ナビゲーションに現在位置を示す
+function presentLocation() {
+    // ページの各セクションの位置を取得
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav_list-item a');
+
+    // スクロールイベントを監視
+    window.addEventListener('scroll', function() {
+        // 現在のスクロール位置を取得
+        // 現在のスクロール位置を取得
+        const currentScroll = window.scrollY;
+
+        // 現在のスクロール位置に応じて、ナビゲーションのリンクのスタイルを変更
+        sections.forEach((section, index) => {
+            if (section.offsetTop <= currentScroll && section.offsetTop + section.offsetHeight > currentScroll) {
+                navLinks[index].classList.add('active');
+            } else {
+                navLinks[index].classList.remove('active');
+            }
+        });
+    });
+}
+
 // 関数の実行
 smoothScroll();
 mouseStalker();
+presentLocation()
