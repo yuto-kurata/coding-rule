@@ -58,7 +58,34 @@ function presentLocation() {
     });
 }
 
+// GSAP 特定要素にカーソルが入ると画像追従
+function mouseover() {
+    let container = document.getElementById('contents1');
+    let image = document.getElementById('image');
+
+    container.addEventListener('mouseover', function(e) {
+    image.style.display = 'block';
+    });
+
+    container.addEventListener('mouseout', function(e) {
+    image.style.display = 'none';
+    });
+
+    container.addEventListener('mousemove', function(e) {
+        let offsetX = -300; // カーソルからのX方向のオフセット
+        let offsetY = 0; // カーソルからのY方向のオフセット
+
+        gsap.to(image, {
+          duration: 0.8,
+          left: e.pageX + offsetX,
+          top: e.pageY + offsetY
+        });
+      });
+}
+
+
 // 関数の実行
 smoothScroll();
 mouseStalker();
-presentLocation()
+presentLocation();
+mouseover()

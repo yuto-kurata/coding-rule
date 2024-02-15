@@ -299,6 +299,12 @@ pre span {
   margin-top: 58px;
 }
 
+.contents1 #image {
+  position: absolute;
+  display: none;
+  width: 40%;
+}
+
 .contents2 .skill_box {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -299,6 +299,14 @@ pre {
     }
 }
 
+.contents1 {
+    #image {
+        position: absolute;
+        display: none;
+        width: 40%;
+    }
+}
+
 .contents2 {
     .skill_box {
         display: flex;
