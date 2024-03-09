@@ -1,1 +1,2 @@
-コーディングルール
+##coding rule##
+yuto kurata のコーディングルールです。
