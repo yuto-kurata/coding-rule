@@ -95,7 +95,7 @@ window.addEventListener("scroll", function () {
     const documentHeight = document.body.clientHeight;
 
     if (documentHeight - windowHeight - scrollValue < 300) {
-        document.body.style.backgroundColor = "lightblue";
+        document.body.style.backgroundColor = "#B2B1A7";
     } else {
         document.body.style.backgroundColor = "#D3D2C9";
     }
