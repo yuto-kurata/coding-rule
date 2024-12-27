@@ -19,12 +19,10 @@ canvas {
 }
 
 body {
-  background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)), linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
-  background-position: center center;
-  background-size: 16px 16px;
-  background-repeat: repeat;
-  background-attachment: fixed;
   font-family: Sawarabi Gothic, sans-serif;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #2F4E84;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -68,6 +66,7 @@ section {
 }
 section .contents_wrap {
   padding: 30px;
+  border: 1px solid #3F6298;
 }
 
 .sub_title {
@@ -233,10 +232,22 @@ pre span {
   height: 100vh;
   padding: 15px;
   background-color: rgba(217, 217, 217, 0.4);
+  border: 1px solid #d1d1d1;
 }
 .nav_list {
   list-style: none;
   font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  gap: 1.5rem;
 }
 .nav_list-item {
   padding-bottom: initial;
@@ -245,9 +256,6 @@ pre span {
 .nav_list-item a {
   position: relative;
   text-decoration: none;
-  display: grid;
-  width: 100%;
-  padding: 12px;
   color: #000;
   font-weight: 600;
   font-size: 14px;

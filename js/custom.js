@@ -88,6 +88,19 @@ function mouseover() {
 	});
 }
 
+//ページ下部300pxスクロールすると全体の背景色を変更
+window.addEventListener("scroll", function () {
+    const scrollValue = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.body.clientHeight;
+
+    if (documentHeight - windowHeight - scrollValue < 300) {
+        document.body.style.backgroundColor = "lightblue";
+    } else {
+        document.body.style.backgroundColor = "#D3D2C9";
+    }
+});
+
 // 関数の実行
 smoothScroll();
 mouseStalker();

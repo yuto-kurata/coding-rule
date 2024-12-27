@@ -1,5 +1,6 @@
 $white: #fff;
 $black: #000;
+$EastBay: #2F4E84;
 $accent: royalblue;
 
 //
@@ -20,21 +21,9 @@ canvas {
 }
 
 body {
-	background-image: linear-gradient(
-			0deg,
-			transparent calc(100% - 1px),
-			#f0f0f0 calc(100% - 1px)
-		),
-		linear-gradient(
-			90deg,
-			transparent calc(100% - 1px),
-			#f0f0f0 calc(100% - 1px)
-		);
-	background-position: center center;
-	background-size: 16px 16px;
-	background-repeat: repeat;
-	background-attachment: fixed;
 	font-family: Sawarabi Gothic, sans-serif;
+	transition: 0.3s;
+	color: $EastBay;
 	&::-webkit-scrollbar {
 		display: none;
 	}
@@ -77,6 +66,7 @@ section {
 	scroll-margin-top: 40px;
 	.contents_wrap {
 		padding: 30px;
+		border: 1px solid #3F6298;
 	}
 }
 .sub_title {
@@ -240,19 +230,21 @@ pre {
 	height: 100vh;
 	padding: 15px;
 	background-color: rgb(217 217 217 / 40%);
+	border: 1px solid #d1d1d1;
 
 	&_list {
 		list-style: none;
 		font-size: 18px;
+		display: flex;
+		flex-direction: column;
+		align-items: baseline;
+		gap: 1.5rem;
 		&-item {
 			padding-bottom: initial;
 			line-height: inherit;
 			a {
 				position: relative;
 				text-decoration: none;
-				display: grid;
-				width: 100%;
-				padding: 12px;
 				color: $black;
 				font-weight: 600;
 				font-size: 14px;
