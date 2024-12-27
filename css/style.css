@@ -35,7 +35,9 @@ p {
   letter-spacing: 0.04em;
 }
 
-th, td, li {
+th,
+td,
+li {
   line-height: 1.5;
   letter-spacing: 0.04em;
 }
@@ -115,7 +117,8 @@ table {
           box-sizing: border-box;
   border-collapse: collapse;
 }
-table th, table td {
+table th,
+table td {
   padding: 0.5em 1em;
   vertical-align: middle;
 }
@@ -132,7 +135,8 @@ table th {
 table td {
   font-size: 13px;
 }
-table .left, table .right {
+table .left,
+table .right {
   background-color: transparent;
   font-weight: bold;
   font-size: 16px;
@@ -239,17 +243,33 @@ pre span {
   line-height: inherit;
 }
 .nav_list-item a {
+  position: relative;
+  text-decoration: none;
   display: grid;
   width: 100%;
   padding: 12px;
   color: #000;
   font-weight: 600;
   font-size: 14px;
-}
-.nav_list-item .active {
-  background: #ff3434;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+.nav_list-item a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  background: #e45858;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.nav_list-item .active {
+  color: #e45858;
+}
+.nav_list-item .active::before {
+  width: 100%;
 }
 
 .scroll_indicator {
