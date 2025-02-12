@@ -32,13 +32,6 @@ function init() {
     const box = new THREE.Mesh(geometry, material);
     scene.add(box);
 
-    // ライトを作る
-    const light = new THREE.DirectionalLight(0xFFFFFF)
-    light.intensity = 1; // 光の強さ倍
-    light.position.set(1, 1, 1); // ライトの方向
-    // シーンに追加
-    scene.add(light);
-
     // レンダリング
     renderer.render(scene, camera);
 
@@ -50,15 +43,15 @@ function init() {
         const mouseY = e.clientY;
         const targetX = (mouseX - window.innerWidth / 4) * 0.001;
         const targetY = (mouseY - window.innerHeight / 4) * 0.001;
-    
+
         // boxとマウスの位置の差分を計算
         const diffX = targetX - box.position.x;
         const diffY = targetY - box.position.y;
-    
+
         // 差分に基づいてboxの位置を更新
         box.position.x += diffX * 0.05;
         box.position.y += diffY * 0.05;
-    
+
         // マウスが近づくとboxが変形するようにスケールを更新
         const distance = Math.sqrt(diffX * diffX + diffY * diffY);
         const scale = Math.max(0.1, 1 - distance * 0.1);
