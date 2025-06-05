@@ -14,13 +14,11 @@ html {
 
 canvas {
   position: fixed;
-  -webkit-filter: blur(80px);
-          filter: blur(80px);
+  filter: blur(80px);
 }
 
 body {
   font-family: Sawarabi Gothic, sans-serif;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   background-color: #D3D2C9;
   color: #2F4E84;
@@ -113,8 +111,7 @@ ul li {
 }
 
 table {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border-collapse: collapse;
 }
 table th,
@@ -148,18 +145,13 @@ table .right {
   top: -15px;
   left: -15px;
   z-index: 9999;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  transform: translate(0, 0);
   width: 30px;
   height: 30px;
   border-radius: 50%;
   background: #b64040;
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
   pointer-events: none;
   mix-blend-mode: difference;
 }
@@ -170,18 +162,14 @@ table .right {
   height: 20px;
   border: 2px solid #b64040;
   background: none;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
 pre {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 1.3rem 0;
   overflow-x: auto;
-  -webkit-box-shadow: 0 4px 6px -1px rgba(0, 16, 34, 0.1490196078);
-          box-shadow: 0 4px 6px -1px rgba(0, 16, 34, 0.1490196078);
+  box-shadow: 0 4px 6px -1px rgba(0, 16, 34, 0.1490196078);
   background: #3d3d3e;
   word-break: normal;
   word-wrap: normal;
@@ -217,7 +205,7 @@ pre span {
 .header .white::after {
   position: absolute;
   top: -64px;
-  right: 60px;
+  right: 68px;
   z-index: 1;
   color: #bbb;
   font-weight: bold;
@@ -238,16 +226,9 @@ pre span {
 .nav_list {
   list-style: none;
   font-size: 18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  flex-direction: column;
+  align-items: baseline;
   gap: 1.5rem;
 }
 .nav_list-item {
@@ -260,7 +241,6 @@ pre span {
   color: #000;
   font-weight: 600;
   font-size: 14px;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 .nav_list-item a::before {
@@ -271,7 +251,6 @@ pre span {
   width: 0;
   height: 2px;
   background: #e45858;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 .nav_list-item .active {
@@ -295,18 +274,8 @@ pre span {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  -webkit-animation: parallel-scroll linear;
-          animation: parallel-scroll linear;
+  animation: parallel-scroll linear;
   animation-timeline: scroll();
-}
-
-@-webkit-keyframes parallel-scroll {
-  from {
-    translate: calc(100vw - 375px);
-  }
-  to {
-    translate: 0 0;
-  }
 }
 
 @keyframes parallel-scroll {
@@ -335,13 +304,9 @@ pre span {
 }
 
 .contents2 .skill_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .contents4 .bem-rule {

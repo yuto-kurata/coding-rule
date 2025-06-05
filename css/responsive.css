@@ -15,13 +15,9 @@
     top: 0;
     padding: 0;
     z-index: 99;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin-top: 58px;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
+    justify-content: end;
     background-color: inherit;
   }
   .nav_list {
@@ -29,9 +25,7 @@
     font-size: 12px;
   }
   .nav_list-item {
-    -webkit-writing-mode: vertical-rl;
-        -ms-writing-mode: tb-rl;
-            writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
     text-orientation: sideways;
     padding: 6px 3px;
   }
@@ -51,19 +45,9 @@
     display: block;
     width: 100%;
     height: 100%;
-    -webkit-transform-origin: bottom;
-            transform-origin: bottom;
-    -webkit-animation: parallel-scroll linear;
-            animation: parallel-scroll linear;
+    transform-origin: bottom;
+    animation: parallel-scroll linear;
     animation-timeline: scroll();
-  }
-  @-webkit-keyframes parallel-scroll {
-    from {
-      scale: 1 0;
-    }
-    to {
-      scale: 1 1;
-    }
   }
   @keyframes parallel-scroll {
     from {
